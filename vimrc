@@ -25,6 +25,9 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'wavded/vim-stylus'
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,16 +50,6 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " Coffeescript settings
 syntax enable
 filetype plugin indent on
@@ -64,11 +57,8 @@ filetype plugin indent on
 " Easymotion settings
 let g:EasyMotion_leader_key = '<Leader>' 
 
-colorscheme badwolf
-" Make the gutters darker than the background.
-let g:badwolf_darkgutter = 1
-" Turn on CSS properties highlighting
-let g:badwolf_css_props_highlight = 1
+colorscheme base16-eighties
+set background=dark
 
 " Automatically re-source .vimrc when it's saved
 autocmd BufWritePost .vimrc source $MYVIMRC
